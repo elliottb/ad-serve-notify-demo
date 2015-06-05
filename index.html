@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sponsored by Test</title>
+<link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+<style>
+.ad-container .sponsor-text {
+	font-weight: bold;
+	display: none;
+}
+</style>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="ads.js"></script>
+<script>
+// Ad listener.
+$(document).bind('adserve', function(e, placement){
+	if (placement == 'ad1') {
+		if ($(placement + '-copy')) {
+			$('.' + placement + '-copy').show();
+		}
+	}
+});
+</script>
+</head>
+<body>
+	<div class="ad-container">
+		<div class="sponsor-text ad1-copy" style="display:none">Sponsored By</d>
+		<div class="ad-target ad1"></div>
+	</div>
+</body>
+</html>
