@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+	
+	// Example ad iframe.
 	var ad = '<iframe border="0" scrolling="no" style="border:none" width="200" height="200" src="http://upload.wikimedia.org/wikipedia/en/8/86/Shift_MSNBC_logo.jpg"><iframe>';
 
 	// Example logic to serve ad 50% of the time.
